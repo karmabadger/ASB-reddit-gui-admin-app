@@ -1,0 +1,28 @@
+{
+  "name": "asbapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron main.js",
+    "runserve": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenxuan27/ASBApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenxuan27/ASBApp/issues"
+  },
+  "homepage": "https://github.com/wenxuan27/ASBApp#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "snoowrap": "^1.22.0"
+  },
+  "devDependencies": {
+    "electron": "^16.0.6"
+  }
+}

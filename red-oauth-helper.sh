@@ -1,0 +1,2 @@
+npx reddit-oauth-helper
+

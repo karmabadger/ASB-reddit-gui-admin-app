@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/style.css">
+    <title>AMA App</title>
+</head>
+
+
+<script type="text/javascript" src="../../scripts/asbapp.js"></script>
+
+
+
+<body>
+
+
+    <h1>AMA App</h1>
+
+    <!-- <button onclick="send_test_msg()">Send Test Message</button> -->
+
+    <h2>Find All the Users who participated in the AMA:</h2>
+
+    <form action="" method="get" id="thread-form">
+        <label for="fname" id="submission-id-label">Submission ID:</label><br>
+        <input type="text" id="submission-id"><br><br>
+        <label for="fname" id="no-list-label">Exclude List:</label><br>
+        <input type="text" id="no-list"><br><br>
+        <label for="fname" id="accept-mods-label">Accept MODs?:</label><br>
+        <label for="fname" id="accept-mods-yes-label">yes:</label>
+        <input type="radio" id="accept-mods-yes" name="accept-mods" value="yes">
+        <label for="fname" id="accept-mods-no-label">no:</label>
+        <input type="radio" id="accept-mods-no" name="accept-mods" value="no"><br><br>
+        <label for="fname" id="output-path-label">Output Path:</label><br>
+        <input type="text" id="output-path">    
+    </form>
+    <button onclick="fetchthreadusers()">Get AMA Users</button>
+
+
+    <br><br><br>
+
+    <h2>Send a Message: </h2>
+
+    <form action="" method="get" id="send-msg-form">
+        <label for="fname" id="users-file-label">Users file path:</label><br>
+        <input type="text" id="users-file"><br><br>
+        <label for="fname" id="poap-file-label">POAP Links file path:</label><br>
+        <input type="text" id="poap-file"><br><br>
+        <label for="fname" id="subreddit-label">From Subreddit:</label><br>
+        <input type="text" id="subreddit" value="AltStreetBets"><br><br>
+        <label for="fname" id="subject-label">Subject:</label><br>
+        <input type="text" id="subject"><br><br>
+        <label for="fname" id="msg-label">Message Content:</label><br>
+        <textarea name="msg-textarea" id="msg-textarea" cols="100" rows="50"></textarea>
+        <!-- <input type="text" id="msg-textbox"><br><br> -->
+           
+    </form>
+    <button onclick="send_msg()">Send Message</button>
+
+    
+</body>
+
+</html>

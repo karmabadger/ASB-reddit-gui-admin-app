@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF-8">
+      <title>ASB App</title>
+      <link rel = "stylesheet" 
+         href = "../styles/style.css" />
+
+   </head>
+   
+   <body>
+      <div class = "container">
+         <h1>ASB AMA App</h1>
+
+
+
+         <button onclick="location.href='./AMAapp/signin.html'">Sign In</button>
+         <button onclick="location.href='./AMAapp/ama_app.html'">App</button>
+         <!-- <div class = "form-group">
+            <label for = "Name">Name</label>
+            <input type = "text" name = "Name" value = "" id = "Name" 
+               placeholder = "Name" class = "form-control" required>
+         </div>
+         
+         <div class = "form-group">
+            <label for = "Email">Email</label>
+            <input type = "email" name = "Email" value = "" id = "Email" 
+               placeholder = "Email" class = "form-control" required>
+         </div>
+         
+         <div class = "form-group">
+            <button class = "btn btn-primary" id = "add-to-list">Add to list!</button>
+         </div>
+         
+         <div id = "contact-list">
+            <table class = "table-striped" id = "contact-table">
+               <tr>
+                  <th class = "col-xs-2">S. No.</th>
+                  <th class = "col-xs-4">Name</th>
+                  <th class = "col-xs-6">Email</th>
+               </tr>
+            </table>
+         </div> -->
+         
+         <!-- <script src = "../scripts/view.js" ></script> -->
+
+
+         <script>
+            const {ipcRenderer} = require('electron')
+   
+            // Synchronous message emmiter and handler
+            console.log(ipcRenderer.sendSync('synchronous-message', 'sync ping')) 
+   
+            // Async message handler
+            ipcRenderer.on('asynchronous-reply', (event, arg) => {
+               console.log(arg)
+            })
+   
+            // Async message sender
+            ipcRenderer.send('asynchronous-message', 'async ping')
+         </script>
+
+         <script>
+            console.log("ehl")
+         </script>
+      </div>
+   </body>
+</html>
